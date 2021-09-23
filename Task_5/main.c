@@ -4,6 +4,8 @@
 #include <string.h>
 #include<limits.h>
 
+/*
+*/
 char *trim(char toTrim[])
 {
     char *end;
@@ -30,6 +32,8 @@ char *trim(char toTrim[])
     return toTrim;
 }
 
+/*
+*/
 char *removeFirstTwoWords(char *userInput)
 {
     int wordCounter = 0;
@@ -50,11 +54,13 @@ char *removeFirstTwoWords(char *userInput)
 
     if(wordCounter < 2)
     {
-        printf("Hey, don't try to tick me like that! Your input had less than three words and therefore there is no third word to be printed :(");
+        printf("Hey, don't try to trick me like that! Your input had less than three words and therefore there is no third word to be printed :(");
     }
     return userInput;
 }
 
+/*
+*/
 void thirdWord(char *userInput)
 {
     userInput = removeFirstTwoWords(userInput);
