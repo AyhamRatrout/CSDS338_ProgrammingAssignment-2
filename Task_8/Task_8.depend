@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1632538659 source:c:\users\aiham\desktop\arr90_csds338_programmingassignment#2\task_8\main.c
+	<stdio.h>
+	<stdlib.h>
+	<limits.h>
+
