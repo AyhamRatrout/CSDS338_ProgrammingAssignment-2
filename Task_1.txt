@@ -132,7 +132,7 @@ void main()
             CPUCycleDone = 0;
         }
         //creates 10 different tasks
-        for(int j = 0; j < 2; j++){
+        for(int j = 0; j < 5; j++){
             Task *T = createTask();
             printf("New task created! Priority = %d \t Burst Time = %d \t PID = %d\n", T->priority, T->burst, T->PID);
             enqueue(runQueue[T->priority], T);

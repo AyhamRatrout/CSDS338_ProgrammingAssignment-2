@@ -74,7 +74,7 @@ void dequeue(Queue *Q)
         Q->front++;
         if(Q->front==Q->capacity)
         {
-            Q->front=NULL;
+            Q->front=0;
         }
     }
     return;
@@ -132,9 +132,10 @@ void main()
             CPUCycleDone = 0;
         }
         //creates 10 different tasks
-        for(int j = 0; j < 2; j++){
+        for(int j = 0; j < 5; j++){
             Task *T = createTask();
             printf("New task created! Priority = %d \t Burst Time = %d \t PID = %d\n", T->priority, T->burst, T->PID);
+            printf("%d\n", T->priority);
             enqueue(runQueue[T->priority], T);
         }
         cycleTimePassed++;
@@ -158,7 +159,7 @@ void main()
             }
             else if(CPUCycleDone == 1){
                 enqueue(runQueue[CPU[0]->priority], CPU[0]);
-                printf("\nProcess with PID %d and priority %d has used up a full CPU cycle and is yet to be completed! This process will be kicked off the CPU and a new process will take its place in the next cycle.\n\n", CPU[0]->PID, CPU[0]->priority, CPU[0]->burst);
+                printf("\nProcess with PID %d and priority %d has used up a full CPU cycle and is yet to be completed! This process will be kicked off the CPU and a new process will take its place in the next cycle.\n\n", CPU[0]->PID, CPU[0]->priority);
                 cycleTimePassed = 0;
                 CPU[0] = NULL;
             }
